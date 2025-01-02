@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.lightning-bolt-animation {
+  animation: lightningFlash 1.5s infinite ease-in-out;
+  will-change: color, transform;
+}
+
+@keyframes lightningFlash {
+  0% {
+    color: #ffeb3b; /* Bright Yellow (lightning flash) */
+    transform: scale(1);
+  }
+  10% {
+    color: #ffffff; /* Intense white (flash of lightning) */
+    transform: scale(1.1); /* Slightly scale up for intensity */
+  }
+  20% {
+    color: #00bcd4; /* Electric cyan */
+    transform: scale(1.05); /* Small scale for added flicker */
+  }
+  30% {
+    color: #ffffff; /* Flashing white */
+    transform: scale(1.1); /* Scale up to simulate the intensity */
+  }
+  40% {
+    color: #ffeb3b; /* Bright yellow again */
+    transform: scale(1);
+  }
+  50% {
+    color: #ffffff; /* Bright white */
+    transform: scale(1.1);
+  }
+  60% {
+    color: #ffeb3b; /* Bright yellow again */
+    transform: scale(1);
+  }
+  70% {
+    color: #00bcd4; /* Electric cyan */
+    transform: scale(1.05);
+  }
+  80% {
+    color: #ffffff; /* Flashing white */
+    transform: scale(1.1);
+  }
+  90% {
+    color: #ffeb3b; /* Yellow again */
+    transform: scale(1);
+  }
+  100% {
+    color: #ffffff; /* Final flash of white */
+    transform: scale(1.1);
+  }
+}
+
+.clip-ellipse-full {
+  clip-path: ellipse(70% 70% at 50% 50%);
+}
+
+.pulse-border-glow-multi {
+  animation: pulse-border-multi 3s infinite ease-in-out;
+  border-radius: 50%; /* Optional: makes it a circle */
+}
+
+@keyframes pulse-border-multi {
+  0% {
+    transform: scale(1);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    transform: scale(1.1);
+    border: 4px solid rgba(255, 255, 0, 0.8); /* Yellow */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); /* Yellow glow */
+  }
+  50% {
+    transform: scale(1);
+    border: 4px solid rgba(0, 255, 0, 0.8); /* Green border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Green glow */
+  }
+  75% {
+    transform: scale(1.1);
+    border: 4px solid rgba(128, 0, 128, 0.8); /* Purple */
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.8); /* Purple glow */
+  }
+  100% {
+    transform: scale(1);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
