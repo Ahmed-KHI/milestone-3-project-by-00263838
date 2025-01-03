@@ -1,4 +1,4 @@
-import { Product } from "@/pages/types";
+import { Product } from "@/types/types";
 import React from "react";
 import Image from "next/legacy/image";
 

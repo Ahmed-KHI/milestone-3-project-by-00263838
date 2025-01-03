@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/legacy/image";
 import Productcard from "./Productcard";
-import { Product } from "@/pages/types";
+import { Product } from "@/types/types";
 
 const Menu = () => {
   const [products, setProducts] = useState<Product[]>([]);
